@@ -244,8 +244,32 @@ figure {
     padding: 1em;
     margin: 3px 0 0 3px;
   }
-  }
   body {
     padding-bottom: 0px;
   }
+}
+
+@media screen and (min-width: 992px) {
+/* Posters should show for all movies except the first one */
+.movie-poster {
+  display: inline-block;
+}
+.movie:first-child .movie-poster {
+  display: none;
+}
+/* Movie overviews should be hidden for all movies except the first one */
+.movie-details, .movie-backdrop {
+  display: none;
+}
+.movie:first-child .movie-details, .movie:first-child .movie-backdrop {
+  display: inline-block;
+}
+/* Movies should be laid out in a 3-column grid, except for the first one */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.movie:first-child {
+  grid-column: 1 / 4;
+}
 }
