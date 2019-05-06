@@ -195,3 +195,57 @@ figure {
 .about > p {
   margin: 0;
 }
+
+@media screen and (min-width: 768px) {
+  /* Move navbar and logo */
+  .site-nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 80px;
+  }
+  .site-nav-list {
+    margin: 80px auto;
+  }
+  .site-nav-item {
+    float: left;
+    width: 80px;
+  }
+  .site-logo {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    z-index: 110;
+  }
+  main {
+    margin-left: 80px;
+  }
+  /* Make film overviews visible */
+  .movie-overview {
+    display: inline-block;
+  }
+  /* Footer sections should be side by side rather than stacked */
+  .site-footer {
+    margin-left: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-nav {
+    background-color: black;
+    color: white;
+    margin-top: 3px;
+  }
+  .about {
+    background-color: black;
+    color: #ffffff;
+    padding: 1em;
+    margin: 3px 0 0 3px;
+  }
+  }
+  body {
+    padding-bottom: 0px;
+  }
+}
